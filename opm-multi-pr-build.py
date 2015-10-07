@@ -61,7 +61,7 @@ def build_ert(cmake, ert_build_options):
         cmake_arglist.extend(ert_build_options)
         subprocess.check_call(cmake_arglist)
         subprocess.check_call(["make",  "-j" , numcpu , "install"], cwd=build_dir)
-        subprocess.check_call(["ctest", "-LE", "StatoilData"], cwd=build_dir)
+        subprocess.check_call(["ctest", "--output-on-failure", "-LE", "StatoilData"], cwd=build_dir)
 
 
 
