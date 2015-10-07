@@ -82,7 +82,7 @@ def build_opm(cmake, opm_build_options):
         cmake_arglist.extend(opm_build_options)
         subprocess.check_call(cmake_arglist)
         subprocess.check_call(["make", "-j", numcpu, "install"], cwd=build_dir)
-        subprocess.check_call(["ctest", "-V"])
+        subprocess.check_call(["ctest", "--output-on-failure"])
 
 
 repo_list = [("ert"              , "git://github.com/Ensembles/ert.git"        , build_ert),
