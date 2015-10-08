@@ -87,7 +87,7 @@ def build_opm(cmake, opm_build_options):
 
 repo_list = [("ert"              , "git://github.com/Ensembles/ert.git"        , build_ert),
              ("opm-common"       , "git://github.com/OPM/opm-common.git"       , build_opm),
-	     ("opm-parser"       , "git://github.com/OPM/opm-parser.git"       , build_opm),
+	         ("opm-parser"       , "git://github.com/OPM/opm-parser.git"       , build_opm),
              ("opm-material"     , "git://github.com/OPM/opm-material.git"     , build_opm),
              ("opm-core"         , "git://github.com/OPM/opm-core.git"         , build_opm),
              ("dune-cornerpoint" , "git://github.com/OPM/dune-cornerpoint.git" , build_opm),
@@ -139,6 +139,8 @@ def multi_pr(args):
 
     if "ert" in os.environ:
         repository_pullrequest_["ert"] = os.environ["ert"]
+    if "opm-common" in os.environ:
+        repository_pullrequest_["opm-common"] = os.environ["opm-common"]
     if "opm-parser" in os.environ:
         repository_pullrequest_["opm-parser"] = os.environ["opm-parser"]
     if "opm-material" in os.environ:
