@@ -101,7 +101,7 @@ def cleanup():
     for repo, url, build in repo_list:
         if repo in repository_pullrequest_:
             pr = repository_pullrequest_[repo]
-            git_delete_pr_branch(repo, pr)
+            git_delete_pr_branch(pr)
 
     #for repo, url, build in repo_list:
     #    with PathContext(working_dir):
