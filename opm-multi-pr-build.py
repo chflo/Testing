@@ -92,7 +92,6 @@ repo_list = [("ert"              , "git://github.com/Ensembles/ert.git"        ,
              ("opm-core"         , "git://github.com/OPM/opm-core.git"         , build_opm),
              ("dune-cornerpoint" , "git://github.com/OPM/dune-cornerpoint.git" , build_opm),
              ("opm-autodiff"     , "git://github.com/OPM/opm-autodiff.git"     , build_opm),
-             ("opm-polymer"      , "git://github.com/OPM/opm-polymer.git"      , build_opm),
              ("opm-porsol"       , "git://github.com/OPM/opm-porsol.git"       , build_opm),
              ("opm-upscaling"    , "git://github.com/OPM/opm-upscaling.git"    , build_opm)]
 
@@ -151,8 +150,6 @@ def multi_pr(args):
         repository_pullrequest_["dune-cornerpoint"] = os.environ["dune-cornerpoint"]
     if "opm-autodiff" in os.environ:
         repository_pullrequest_["opm-autodiff"] = os.environ["opm-autodiff"]
-    if "opm-polymer" in os.environ:
-        repository_pullrequest_["opm-polymer"] = os.environ["opm-polymer"]
     if "opm-porsol" in os.environ:
         repository_pullrequest_["opm-porsol"] = os.environ["opm-porsol"]
     if "opm-upscaling" in os.environ:
