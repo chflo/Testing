@@ -101,7 +101,11 @@ def cleanup():
     	with PathContext(repo):
 	  if repo in repository_pullrequest_:
               pr = repository_pullrequest_[repo]
-              git_delete_pr_branch(pr)
+              #git_delete_pr_branch(pr)
+              if pr is not None:
+                  #subprocess.check_call([git , "checkout" , "master"])
+        	  pr_branch = "PR-" + pr
+        	  subprocess.check_call([git , "branch" , "-D", pr_branch])
 
     #for repo, url, build in repo_list:
     #    with PathContext(working_dir):
