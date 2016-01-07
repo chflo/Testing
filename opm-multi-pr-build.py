@@ -24,7 +24,7 @@ def git_merge_pr(pr):
 
 def git_delete_pr_branch(pr):
     if pr is not None:
-        subprocess.check_call([git , "checkout" , "master"])
+        #subprocess.check_call([git , "checkout" , "master"])
         pr_branch = "PR-" + pr
         subprocess.check_call([git , "branch" , "-D", pr_branch])
 
