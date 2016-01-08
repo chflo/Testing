@@ -97,13 +97,6 @@ def cleanup():
         	  pr_branch = "PR-" + pr
         	  subprocess.check_call([git , "branch" , "-D", pr_branch])
 
-    #for repo, url, build in repo_list:
-    #    with PathContext(working_dir):
-    #        if os.path.isdir(repo):
-    #            shutil.rmtree( repo )
-
-
-
 
 def multi_pr(args):
     if len(args) == 4:
